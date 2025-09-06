@@ -1,8 +1,15 @@
-import { Theme } from "../types/theme";
+import { DefaultTheme } from "styled-components/native";
 import { colors } from "./colors";
 
-export const lightTheme: Theme = {
+export const lightTheme: DefaultTheme = {
   colors: {
+    primary: colors.primary500,
+    primaryLight: colors.primary300,
+    primaryHeavy: colors.primary700,
+    secondary: colors.accent500,
+    secondaryLight: colors.accent300,
+    secondaryHeavy: colors.accent700,
+
     // 按钮颜色
     btnPrimary: colors.primary500,
     btnPrimaryHover: colors.primary300,

@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/images/files/onboarding1.webp",
+      "sha1": "a12266ed4d92a6c631d4228cee5ed91fbb525e0f"
+    },
+    {
+      "path": "src/assets/images/files/onboarding2.webp",
+      "sha1": "2ea1904d7c147a2389c7251f9ef5482d20e5ad1a"
+    },
+    {
+      "path": "src/assets/images/files/onboarding3.webp",
+      "sha1": "debdb9f0126b193549af03ea51fc749aa43c3b7f"
+    }
+  ]
+}

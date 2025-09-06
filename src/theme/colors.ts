@@ -1,4 +1,4 @@
-import { ColorPalette } from "../types/theme";
+import { ColorPalette } from "styled-components/native";
 
 export const colors: ColorPalette = {
   primary50: '#FFF2EB',

@@ -12,6 +12,9 @@
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D2E4011EE16D60C7FA470FAA /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		022398D3FE464B92824B82E1 /* onboarding1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 1F1F2F96AD794EFB9BF639F6 /* onboarding1.webp */; };
+		28AC9709BE20482193F6E15B /* onboarding2.webp in Resources */ = {isa = PBXBuildFile; fileRef = E20880AC6B7546C0B82CDBDE /* onboarding2.webp */; };
+		18098817C9AF4606A4E89338 /* onboarding3.webp in Resources */ = {isa = PBXBuildFile; fileRef = 498182E1188440148A96C1D9 /* onboarding3.webp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = skillSwapMobile/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = skillSwapMobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		1F1F2F96AD794EFB9BF639F6 /* onboarding1.webp */ = {isa = PBXFileReference; name = "onboarding1.webp"; path = "../src/assets/images/files/onboarding1.webp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E20880AC6B7546C0B82CDBDE /* onboarding2.webp */ = {isa = PBXFileReference; name = "onboarding2.webp"; path = "../src/assets/images/files/onboarding2.webp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		498182E1188440148A96C1D9 /* onboarding3.webp */ = {isa = PBXFileReference; name = "onboarding3.webp"; path = "../src/assets/images/files/onboarding3.webp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				C7614D7BD0D44EFFA6715D90 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -97,6 +104,17 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		C7614D7BD0D44EFFA6715D90 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				1F1F2F96AD794EFB9BF639F6 /* onboarding1.webp */,
+				E20880AC6B7546C0B82CDBDE /* onboarding2.webp */,
+				498182E1188440148A96C1D9 /* onboarding3.webp */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -161,6 +179,9 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				D2E4011EE16D60C7FA470FAA /* PrivacyInfo.xcprivacy in Resources */,
+				022398D3FE464B92824B82E1 /* onboarding1.webp in Resources */,
+				28AC9709BE20482193F6E15B /* onboarding2.webp in Resources */,
+				18098817C9AF4606A4E89338 /* onboarding3.webp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

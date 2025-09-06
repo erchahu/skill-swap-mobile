@@ -1,6 +1,6 @@
-import { Theme } from "../types/theme";
+import { DefaultTheme } from "styled-components/native";
 import { lightTheme } from "./lightTheme";
 
-export const darkTheme: Theme = {
+export const darkTheme: DefaultTheme = {
   ...lightTheme
 };

@@ -2,7 +2,7 @@ import { memo } from "react";
 import { EarthBg, FirstContentLogo, FirstContentWrap, FirstScreenWrap } from "./style";
 import { useTheme } from "styled-components/native";
 import { Text } from "react-native";
-import { images } from "../../../assets/images";
+import { images } from "@images";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const FirstScreen = () => {

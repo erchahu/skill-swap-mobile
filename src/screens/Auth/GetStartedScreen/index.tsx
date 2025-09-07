@@ -1,13 +1,13 @@
 import { memo, useRef } from "react"
-import { Dimensions, Image, Text, View } from "react-native"
+import { Dimensions, View } from "react-native"
 import { useSharedValue } from "react-native-reanimated";
 import Carousel, {
   ICarouselInstance,
   Pagination,
 } from "react-native-reanimated-carousel";
-import { Container, ImageSlider } from "./style";
-import { images, ImageType } from "../../../assets/images";
-import FirstScreen from "./FirstScreen";
+import { Container } from "./style";
+import { ImageType } from "@images";
+import FirstScreen from "./components/FirstScreen";
 import { useTheme } from "styled-components/native";
 
 const data = [...new Array(3).keys()];

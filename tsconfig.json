@@ -3,4 +3,24 @@
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["**/node_modules", "**/Pods"],
   "typeRoots": ["./src/types"],
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@images": ["src/assets/images"],
+      "@fonts": ["src/assets/fonts"],
+      "@animations": ["src/assets/animations"],
+      "@components": ["src/components"],
+      "@hooks": ["src/hooks"],
+      "@locale": ["src/locale"],
+      "@navigation": ["src/navigation"],
+      "@screens": ["src/screens"],
+      "@services": ["src/services"],
+      "@store": ["src/store"],
+      "@theme": ["src/theme"],
+      "@types/*": ["src/types/*"],
+      "@utils": ["src/utils"],
+    },
+  }
 }

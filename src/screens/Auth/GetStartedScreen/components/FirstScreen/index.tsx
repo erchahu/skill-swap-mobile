@@ -1,10 +1,9 @@
 import { memo } from "react";
-import { EarthBg, FirstScreenWrap } from "./style";
+import { FirstScreenWrap } from "./style";
 import { useTheme } from "styled-components/native";
-import { Text } from "react-native";
-import { images } from "@images";
-import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import LogoContent from "./LogoContent";
+import React from "react";
 
 const FirstScreen = () => {
 
@@ -20,10 +19,7 @@ const FirstScreen = () => {
       angle={180}
       angleCenter={{ x: 0.4, y: 0.4 }}
     >
-      <SafeAreaView style={{ width: '100%', flex: 1, position: 'relative' }}>
-        <EarthBg source={images["earth-bg"]} />
-        <LogoContent />
-      </SafeAreaView>
+      <LogoContent />
     </FirstScreenWrap>
   )
 };

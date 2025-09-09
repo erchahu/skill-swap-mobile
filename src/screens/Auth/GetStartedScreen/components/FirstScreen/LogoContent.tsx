@@ -1,12 +1,22 @@
 import React, { memo } from "react"
-import { images } from "@images";
-import { Logo, LogoContentWrap } from "./style";
+import { SkillItemWrap, SkillsContentWrap } from "./style";
+import { Text } from "react-native";
+
+interface SkillItemProps {
+  icon: string;
+}
+
+const SkillItem = memo(({ icon }:SkillItemProps) => {
+  return <SkillItemWrap>
+    <Text>{icon}</Text>
+  </SkillItemWrap>
+})
 
 const LogoContent = () => {
   return (
-    <LogoContentWrap>
-      <Logo source={images["logo-primary-bg"]} />
-    </LogoContentWrap>
+    <SkillsContentWrap>
+      <Text>🌏</Text>
+    </SkillsContentWrap>
   )
 }
 

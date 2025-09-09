@@ -4,7 +4,10 @@
   "exclude": ["**/node_modules", "**/Pods"],
   "typeRoots": ["./src/types"],
   "compilerOptions": {
+    "jsx": "react",
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],

@@ -1,4 +1,4 @@
-import { ms } from "@/utils/scale";
+import { ms, vs } from "@/utils/scale";
 import LinearGradient from "react-native-linear-gradient";
 import styled from "styled-components/native";
 
@@ -14,7 +14,7 @@ export const SkillsContentWrap = styled.View`
   margin-left: ${ms(30)}px;
   margin-right: ${ms(30)}px;
 
-  flex: 1;
+  position: relative;
 `
 
 export const Logo = styled.Image`
@@ -24,4 +24,12 @@ export const Logo = styled.Image`
 
 export const SkillItemWrap = styled.View`
 
+  position: absolute;
+  top: ${vs(1)}px;
+`
+
+export const SkillItemImage = styled.Image`
+  width: ${ms(20)}px;
+  height: ${vs(20)}px;
+  aspect-ratio: 1 / 1;
 `

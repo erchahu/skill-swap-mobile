@@ -23,7 +23,6 @@ export const Logo = styled.Image`
 `
 
 export const SkillItemWrap = styled.View`
-
   position: absolute;
   top: ${vs(1)}px;
 `

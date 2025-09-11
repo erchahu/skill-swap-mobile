@@ -1,5 +1,5 @@
 import React, { memo } from "react"
-import { SkillItemWrap, SkillsContentWrap } from "./style";
+import { SkillItemImage, SkillItemWrap, SkillsContentWrap } from "./style";
 import { Image, Text } from "react-native";
 import { images, ImageType } from "@images";
 
@@ -10,7 +10,7 @@ interface SkillItemProps {
 const SkillItem = memo(({ icon }:SkillItemProps) => {
   return <SkillItemWrap>
     {/* <Text>{icon}</Text> */}
-    <Image source={images[icon]} />
+    <SkillItemImage source={images[icon]} />
   </SkillItemWrap>
 })
 

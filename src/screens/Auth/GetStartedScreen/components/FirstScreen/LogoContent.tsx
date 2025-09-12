@@ -9,7 +9,6 @@ interface SkillItemProps {
 
 const SkillItem = memo(({ icon }:SkillItemProps) => {
   return <SkillItemWrap>
-    {/* <Text>{icon}</Text> */}
     <SkillItemImage source={images[icon]} />
   </SkillItemWrap>
 })

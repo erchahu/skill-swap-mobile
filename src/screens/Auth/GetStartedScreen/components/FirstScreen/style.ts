@@ -24,11 +24,19 @@ export const Logo = styled.Image`
 
 export const SkillItemWrap = styled.View`
   position: absolute;
-  top: ${vs(1)}px;
+  top: ${vs(80)}px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: ${ms(80)}px;
+  height: ${ms(80)}px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: ${ms(40)}px;
 `
 
 export const SkillItemImage = styled.Image`
-  width: ${ms(20)}px;
-  height: ${vs(20)}px;
+  height: ${ms(40)}px;
   aspect-ratio: 1 / 1;
 `

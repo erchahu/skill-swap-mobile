@@ -19,6 +19,11 @@ const LogoContent = () => {
       <Text>🌏</Text>
 
       <SkillItem icon="skill1"></SkillItem>
+      <SkillItem icon="skill1"></SkillItem>
+      <SkillItem icon="skill1"></SkillItem>
+      <SkillItem icon="skill1"></SkillItem>
+      <SkillItem icon="skill1"></SkillItem>
+      <SkillItem icon="skill1"></SkillItem>
     </SkillsContentWrap>
   )
 }

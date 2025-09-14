@@ -8,9 +8,11 @@ interface SkillItemProps {
 }
 
 const SkillItem = memo(({ icon }:SkillItemProps) => {
-  return <SkillItemWrap>
-    <SkillItemImage source={images[icon]} />
-  </SkillItemWrap>
+  return (
+    <SkillItemWrap>
+      <SkillItemImage source={images[icon]} />
+    </SkillItemWrap>
+  )
 })
 
 const LogoContent = () => {
@@ -19,8 +21,8 @@ const LogoContent = () => {
       <Text>🌏</Text>
 
       <SkillItem icon="skill1"></SkillItem>
-      <SkillItem icon="skill1"></SkillItem>
-      <SkillItem icon="skill1"></SkillItem>
+      <SkillItem icon="skill2"></SkillItem>
+      <SkillItem icon="skill3"></SkillItem>
       <SkillItem icon="skill1"></SkillItem>
       <SkillItem icon="skill1"></SkillItem>
       <SkillItem icon="skill1"></SkillItem>

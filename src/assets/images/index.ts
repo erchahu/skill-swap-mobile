@@ -3,12 +3,17 @@ import onboarding2 from './files/onboarding2.webp';
 import onboarding3 from './files/onboarding3.webp';
 import logoPrimaryBg from './files/logo-primary-bg.webp'
 import skill1 from './files/skill1.webp'
+import skill2 from './files/skill2.webp'
+import skill3 from './files/skill3.webp'
+
 const native_images = {
   'onboarding-1': onboarding1,
   'onboarding-2': onboarding2,
   'onboarding-3': onboarding3,
   'logo-primary-bg': logoPrimaryBg,
-  'skill1': skill1
+  'skill1': skill1,
+  'skill2': skill2,
+  'skill3': skill3
 }
 
 export type ImageType = keyof typeof native_images;

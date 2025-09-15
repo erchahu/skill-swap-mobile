@@ -22,9 +22,15 @@ export const Logo = styled.Image`
   height: ${ms(120)}px;
 `
 
-export const SkillItemWrap = styled.View`
+export interface SkillItemWrapProps {
+  top: number;
+  left: number;
+}
+
+export const SkillItemWrap = styled.View<SkillItemWrapProps>`
   position: absolute;
-  top: ${vs(80)}px;
+  top: ${({ top }) => vs(top)}px;
+  left: ${({ left }) => vs(left)}px;
 
   display: flex;
   align-items: center;

@@ -1,15 +1,15 @@
 import React, { memo } from "react"
-import { SkillItemImage, SkillItemWrap, SkillsContentWrap } from "./style";
+import { SkillItemImage, SkillItemWrap, SkillItemWrapProps, SkillsContentWrap } from "./style";
 import { Image, Text } from "react-native";
 import { images, ImageType } from "@images";
 
-interface SkillItemProps {
+interface SkillItemProps extends SkillItemWrapProps {
   icon: ImageType;
 }
 
-const SkillItem = memo(({ icon }:SkillItemProps) => {
+const SkillItem = memo(({ icon, top, left }:SkillItemProps) => {
   return (
-    <SkillItemWrap>
+    <SkillItemWrap top={top} left={left}>
       <SkillItemImage source={images[icon]} />
     </SkillItemWrap>
   )
@@ -20,12 +20,12 @@ const LogoContent = () => {
     <SkillsContentWrap>
       <Text>🌏</Text>
 
-      <SkillItem icon="skill1"></SkillItem>
-      <SkillItem icon="skill2"></SkillItem>
-      <SkillItem icon="skill3"></SkillItem>
-      <SkillItem icon="skill1"></SkillItem>
-      <SkillItem icon="skill1"></SkillItem>
-      <SkillItem icon="skill1"></SkillItem>
+      <SkillItem icon="skill1" top={-30} left={50} />
+      <SkillItem icon="skill2" top={30} left={80} />
+      <SkillItem icon="skill3" top={30} left={50} />
+      <SkillItem icon="skill1" top={30} left={50} />
+      <SkillItem icon="skill1" top={30} left={50} />
+      <SkillItem icon="skill1" top={30} left={50} />
     </SkillsContentWrap>
   )
 }

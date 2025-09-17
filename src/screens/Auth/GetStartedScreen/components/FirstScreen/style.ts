@@ -1,4 +1,4 @@
-import { ms, vs } from "@/utils/scale";
+import { ms } from "@/utils/scale";
 import LinearGradient from "react-native-linear-gradient";
 import styled from "styled-components/native";
 
@@ -11,10 +11,13 @@ export const FirstScreenWrap = styled(LinearGradient)`
 `
 
 export const SkillsContentWrap = styled.View`
-  margin-left: ${ms(30)}px;
-  margin-right: ${ms(30)}px;
-
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   position: relative;
+  background-color: aliceblue;
 `
 
 export const Logo = styled.Image`
@@ -22,24 +25,15 @@ export const Logo = styled.Image`
   height: ${ms(120)}px;
 `
 
-export interface SkillItemWrapProps {
-  top: number;
-  left: number;
-}
-
-export const SkillItemWrap = styled.View<SkillItemWrapProps>`
-  position: absolute;
-  top: ${({ top }) => vs(top)}px;
-  left: ${({ left }) => vs(left)}px;
-
+export const SkillItemWrap = styled.View`
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: ${ms(80)}px;
-  height: ${ms(80)}px;
+  width: ${ms(60)}px;
+  height: ${ms(60)}px;
   background: rgba(255, 255, 255, 0.6);
-  border-radius: ${ms(40)}px;
+  border-radius: ${ms(30)}px;
 `
 
 export const SkillItemImage = styled.Image`

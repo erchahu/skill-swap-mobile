@@ -72,6 +72,7 @@ declare module 'styled-components/native' {
     bgPrimary: string;
     bgSecondary: string;
     bgTertiary: string;
+    bgWhite: string;
     
     // 文本颜色
     textPrimary: string;

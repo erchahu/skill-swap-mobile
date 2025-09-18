@@ -30,6 +30,7 @@ export const lightTheme: DefaultTheme = {
     bgPrimary: colors.neutral50,
     bgSecondary: colors.neutral100,
     bgTertiary: colors.neutral200,
+    bgWhite: colors.neutral50,
     
     // 文本颜色
     textPrimary: colors.neutral800,

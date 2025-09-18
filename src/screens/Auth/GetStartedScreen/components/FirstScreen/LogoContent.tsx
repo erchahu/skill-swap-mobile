@@ -5,16 +5,16 @@ import Logo from "./Logo";
 
 import { images, ImageType } from "@images";
 
-import { AnimatedSkillItem, CenterView, SkillItemImage, SkillItemWrap, SkillsContentWrap } from "./style";
+import { AnimatedSkillItem, CenterView, SkillItemBlurView, SkillItemImage, SkillItemWrap, SkillsContentWrap } from "./style";
 
 interface SkillItemProps {
   icon: ImageType;
   angle: number;
+  distance: number;
 }
 
-const DISTANCE = 80;
 const DURATION = 18000;
-const SkillItem = memo(({ icon, angle }:SkillItemProps) => {
+const SkillItem = memo(({ icon, angle, distance }:SkillItemProps) => {
   const rotateAnim = useRef(new Animated.Value(0)).current;
   
   useEffect(() => {
@@ -34,8 +34,8 @@ const SkillItem = memo(({ icon, angle }:SkillItemProps) => {
   });
   
   // Calculate position based on angle and distance
-  const x = Math.cos(angle * Math.PI / 180) * DISTANCE;
-  const y = Math.sin(angle * Math.PI / 180) * DISTANCE;
+  const x = Math.cos(angle * Math.PI / 180) * distance;
+  const y = Math.sin(angle * Math.PI / 180) * distance;
   
   return (
     <AnimatedSkillItem
@@ -45,6 +45,11 @@ const SkillItem = memo(({ icon, angle }:SkillItemProps) => {
     >
       <SkillItemWrap>
         <SkillItemImage source={images[icon]} />
+        <SkillItemBlurView 
+          blurType="light" 
+          blurAmount={100} 
+          reducedTransparencyFallbackColor="white"
+        />
       </SkillItemWrap>
     </AnimatedSkillItem>
   )
@@ -56,12 +61,12 @@ const LogoContent = () => {
       <CenterView>
         <Logo />
         
-        <SkillItem icon="skill1" angle={0} />
-        <SkillItem icon="skill2" angle={30} />
-        <SkillItem icon="skill3" angle={120} />
-        <SkillItem icon="skill4" angle={154} />
-        <SkillItem icon="skill5" angle={240} />
-        <SkillItem icon="skill6" angle={280} />
+        <SkillItem icon="skill1" angle={20} distance={90} />
+        <SkillItem icon="skill2" angle={46} distance={100} />
+        <SkillItem icon="skill3" angle={138} distance={90} />
+        <SkillItem icon="skill4" angle={154} distance={100} />
+        <SkillItem icon="skill5" angle={260} distance={90} />
+        <SkillItem icon="skill6" angle={280} distance={80} />
       </CenterView>
     </SkillsContentWrap>
   )

@@ -3,6 +3,7 @@ import LinearGradient from "react-native-linear-gradient";
 import styled from "styled-components/native";
 import { Animated } from "react-native";
 import { Column } from "@/styles";
+import { BlurView } from "@react-native-community/blur";
 
 export const FirstScreenWrap = styled(LinearGradient)`
   width: 100%;
@@ -20,17 +21,29 @@ export const SkillsContentWrap = styled(Column)`
 `
 
 export const SkillItemWrap = styled(Column)`
+  position: relative;
   align-items: center;
   justify-content: center;
   width: ${ms(60)}px;
   height: ${ms(60)}px;
-  background: ${({ theme }) => theme.colors.skillItemBg};
+  background: ${({ theme }) => theme.colors.bgTertiary};
   border-radius: ${ms(30)}px;
   border: 1px solid ${({ theme }) => theme.colors.skillItemBorder};
+  overflow: hidden;
+`
+
+export const SkillItemBlurView = styled(BlurView)`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: -1;
 `
 
 export const SkillItemImage = styled.Image`
-  height: ${ms(40)}px;
+  height: ${ms(30)}px;
   aspect-ratio: 1 / 1;
 `
 

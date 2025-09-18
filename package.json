@@ -11,6 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-community/blur": "^4.4.1",
     "@react-native/new-app-screen": "0.81.1",
     "i18next": "^25.5.2",
     "react": "19.1.0",

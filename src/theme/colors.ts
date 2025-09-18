@@ -42,4 +42,7 @@ export const colors: ColorPalette = {
   warning500: '#F6B100',
   info50: '#E9F4FE',
   info500: '#1A72E9',
+
+  transparentWhite: '#FFFFFF4D',
+  transparentWhiteHeavy: '#FFFFFF80',
 };

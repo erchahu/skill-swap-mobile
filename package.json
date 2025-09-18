@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "@react-native/new-app-screen": "0.81.1",
+    "i18next": "^25.5.2",
     "react": "19.1.0",
+    "react-i18next": "^15.7.3",
     "react-native": "0.81.1",
     "react-native-asset": "^2.1.1",
     "react-native-gesture-handler": "^2.28.0",

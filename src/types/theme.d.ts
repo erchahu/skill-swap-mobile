@@ -12,6 +12,7 @@ declare module 'styled-components/native' {
     primary700: string;
     primary800: string;
     primary900: string;
+    
     accent50: string;
     accent100: string;
     accent200: string;
@@ -22,6 +23,7 @@ declare module 'styled-components/native' {
     accent700: string;
     accent800: string;
     accent900: string;
+
     neutral50: string;
     neutral100: string;
     neutral200: string;
@@ -32,6 +34,7 @@ declare module 'styled-components/native' {
     neutral700: string;
     neutral800: string;
     neutral900: string;
+
     success50: string;
     success500: string;
     error50: string;
@@ -40,9 +43,13 @@ declare module 'styled-components/native' {
     warning500: string;
     info50: string;
     info500: string;
+
+    transparentWhite: string;
+    transparentWhiteHeavy: string;
   }
 
   export interface SemanticColors {
+    
     primary: string;
     primaryLight: string;
     primaryHeavy: string;
@@ -70,12 +77,17 @@ declare module 'styled-components/native' {
     textPrimary: string;
     textSecondary: string;
     textDisabled: string;
+    textWhite: string;
     
     // 状态颜色
     statusSuccess: string;
     statusWarning: string;
     statusError: string;
     statusInfo: string;
+
+    // Skill item colors
+    skillItemBg: string;
+    skillItemBorder: string;
   }
 
   export interface ThemeColors extends ColorPalette, SemanticColors {}
@@ -93,11 +105,6 @@ declare module 'styled-components/native' {
     large: number;
   }
 
-  // export interface Theme {
-  //   colors: SemanticColors;
-  //   spacing: SemanticSpacing;
-  //   borderRadius: SemanticBorderRadius;
-  // }
   export interface DefaultTheme {
     colors: SemanticColors;
     spacing: SemanticSpacing;

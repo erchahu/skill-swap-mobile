@@ -1,14 +1,15 @@
-import { memo } from "react";
-import { FirstScreenWrap } from "./style";
+import React, { memo } from "react";
 import { useTheme } from "styled-components/native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useTranslation } from "react-i18next";
+
 import LogoContent from "./LogoContent";
-import React from "react";
+
+import { ContentBox, ContentText, FirstScreenWrap, TitleText } from "./style";
 
 const FirstScreen = () => {
 
+  const { t } = useTranslation();
   const theme = useTheme();
-  const insets = useSafeAreaInsets()
 
   return (
     <FirstScreenWrap
@@ -20,6 +21,12 @@ const FirstScreen = () => {
       angleCenter={{ x: 0.4, y: 0.4 }}
     >
       <LogoContent />
+
+      <ContentBox alignItems="center" justifyContent="center">
+        <TitleText>{t('getStarted.title1')}</TitleText>
+        <TitleText>{t('getStarted.title2')}</TitleText>
+        <ContentText>{t('getStarted.description')}</ContentText>
+      </ContentBox>
     </FirstScreenWrap>
   )
 };

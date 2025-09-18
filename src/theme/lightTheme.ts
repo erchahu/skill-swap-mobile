@@ -3,6 +3,10 @@ import { colors } from "./colors";
 
 export const lightTheme: DefaultTheme = {
   colors: {
+    // Skill item colors
+    skillItemBg: colors.transparentWhite,
+    skillItemBorder: colors.transparentWhiteHeavy,
+    
     primary: colors.primary500,
     primaryLight: colors.primary300,
     primaryHeavy: colors.primary700,
@@ -31,6 +35,7 @@ export const lightTheme: DefaultTheme = {
     textPrimary: colors.neutral800,
     textSecondary: colors.neutral700,
     textDisabled: colors.neutral600,
+    textWhite: colors.neutral50,
     
     // 状态颜色
     statusSuccess: colors.success500,

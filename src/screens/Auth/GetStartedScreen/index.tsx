@@ -1,5 +1,5 @@
 import React, { memo, useRef } from "react"
-import { Dimensions, View } from "react-native"
+import { Dimensions } from "react-native"
 import { useSharedValue } from "react-native-reanimated";
 import Carousel, {
   ICarouselInstance,
@@ -8,6 +8,7 @@ import Carousel, {
 import { Container } from "./style";
 import FirstScreen from "./components/FirstScreen";
 import { useTheme } from "styled-components/native";
+import { Button } from "@/components/styleUI/Button";
 
 const data = [...new Array(3).keys()];
 const { width, height } = Dimensions.get("window");
@@ -39,27 +40,18 @@ const GetStartedScreen = () => {
         height={height}
         data={data}
         onProgressChange={progress}
-        renderItem={({ index }) => (
-          <View
-            style={{
-              flex: 1,
-              borderWidth: 1,
-              justifyContent: "center",
-              backgroundColor: theme.colors.bgPrimary
-            }}
-          >
-            {sliders[index]}
-          </View>
-        )}
+        renderItem={({ index }) => sliders[index]}
       />
  
       <Pagination.Basic
         progress={progress}
         data={data}
-        dotStyle={{ backgroundColor: "rgba(0,0,0,0.2)", width: 30, height: 6, borderRadius: 6 }}
-        containerStyle={{ gap: 15, marginTop: 10 }}
+        dotStyle={{ backgroundColor: "rgba(230, 7, 7, 0.2)", width: 30, height: 6, borderRadius: 6 }}
+        containerStyle={{ gap: 15, position: "absolute", bottom: 160 }}
         onPress={onPressPagination}
       />
+
+      <Button title="继续" onPress={() => {}} />
     </Container>
 
   )

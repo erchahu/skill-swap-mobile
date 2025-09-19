@@ -2,16 +2,36 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "src/assets/images/files/onboarding1.webp",
-      "sha1": "a12266ed4d92a6c631d4228cee5ed91fbb525e0f"
+      "path": "src/assets/images/files/logo-primary-bg.webp",
+      "sha1": "a11307a9728f688af181f460ed0cbdc5de9d001e"
     },
     {
-      "path": "src/assets/images/files/onboarding2.webp",
-      "sha1": "2ea1904d7c147a2389c7251f9ef5482d20e5ad1a"
+      "path": "src/assets/images/files/skill1.webp",
+      "sha1": "0ca8bed8ac5038672f968dd24fd311f251e78882"
     },
     {
-      "path": "src/assets/images/files/onboarding3.webp",
-      "sha1": "debdb9f0126b193549af03ea51fc749aa43c3b7f"
+      "path": "src/assets/images/files/skill2.webp",
+      "sha1": "6b293f9fae85dd7eef620def2a1b6504e380edb5"
+    },
+    {
+      "path": "src/assets/images/files/skill3.webp",
+      "sha1": "9d6a1060b17107a95c636ffd5c42dbddd76a6e1a"
+    },
+    {
+      "path": "src/assets/images/files/skill4.webp",
+      "sha1": "5efe29e2a62f8d994a46e81834123e357a5e3fcc"
+    },
+    {
+      "path": "src/assets/images/files/skill5.webp",
+      "sha1": "bc7515d6917a445467aaea63d754a234488842e4"
+    },
+    {
+      "path": "src/assets/images/files/skill6.webp",
+      "sha1": "99adee310f6c18761a89db1a0f4ffa216b4ad3f3"
+    },
+    {
+      "path": "src/assets/images/files/wave.webp",
+      "sha1": "1a2aba546bb39fc07336d7b69091ab6c20fee3a7"
     }
   ]
 }

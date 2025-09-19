@@ -9,6 +9,8 @@ import { Container, paginationDot, RowButton, RowButtonText, RowWrap } from "./s
 import FirstScreen from "./components/FirstScreen";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components/native";
+import SecondScreen from "./components/SecondScreen";
+import ThirdScreen from "./components/ThirdScreen";
 
 const data = [...new Array(3).keys()];
 const { width, height } = Dimensions.get("window");
@@ -28,8 +30,8 @@ const GetStartedScreen = () => {
 
   const sliders = [
     <FirstScreen />,
-    <FirstScreen />,
-    <FirstScreen />
+    <SecondScreen />,
+    <ThirdScreen />
   ]
 
 

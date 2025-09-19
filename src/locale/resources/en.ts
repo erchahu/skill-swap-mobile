@@ -4,6 +4,14 @@ export default {
       title2: 'Connecting the world',
       description: 'Spend your hour learning new skills \n or sharing your expertise',
       continue: 'Continue',
-      start: 'Start'
+      start: 'Start',
+      screen2Title1: 'Start swap \nEasy steps',
+      screen2Subtitle1: 'Quick matching, easy start',
+      screen2DescTitle1: 'Find a match',
+      screen2DescSubtitle1: 'Find someone who needs your skills',
+      screen2DescTitle2: 'Schedule a time',
+      screen2DescSubtitle2: 'Choose a time that suits both of you',
+      screen2DescTitle3: 'Start exchanging',
+      screen2DescSubtitle3: 'Video call, transfer skills'
     },
   }

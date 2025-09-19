@@ -5,6 +5,7 @@ import skill3 from './files/skill3.webp'
 import skill4 from './files/skill4.webp'
 import skill5 from './files/skill5.webp'
 import skill6 from './files/skill6.webp'
+import wave from './files/wave.webp'
 
 const native_images = {
   'logo-primary-bg': logoPrimaryBg,
@@ -13,7 +14,8 @@ const native_images = {
   'skill3': skill3,
   'skill4': skill4,
   'skill5': skill5,
-  'skill6': skill6
+  'skill6': skill6,
+  'wave': wave
 }
 
 export type ImageType = keyof typeof native_images;

@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		022398D3FE464B92824B82E1 /* onboarding1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 1F1F2F96AD794EFB9BF639F6 /* onboarding1.webp */; };
 		0C80B921A6F3F58F76C31292 /* libPods-skillSwapMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-skillSwapMobile.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		18098817C9AF4606A4E89338 /* onboarding3.webp in Resources */ = {isa = PBXBuildFile; fileRef = 498182E1188440148A96C1D9 /* onboarding3.webp */; };
-		28AC9709BE20482193F6E15B /* onboarding2.webp in Resources */ = {isa = PBXBuildFile; fileRef = E20880AC6B7546C0B82CDBDE /* onboarding2.webp */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D2E4011EE16D60C7FA470FAA /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		2670270E95BF49388D9F83D9 /* logo-primary-bg.webp in Resources */ = {isa = PBXBuildFile; fileRef = 09E0EF50D13F4528923DC74F /* logo-primary-bg.webp */; };
+		6E8BFCC09A0B440E8ED79A32 /* skill1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 9C3EA808FFA14BD999D7406F /* skill1.webp */; };
+		5262CFE93D1B4F4792FF85FF /* skill2.webp in Resources */ = {isa = PBXBuildFile; fileRef = F6E9CA9DD7C248F8AAD9CAF6 /* skill2.webp */; };
+		E781C6BB2E5A494593FDDA58 /* skill3.webp in Resources */ = {isa = PBXBuildFile; fileRef = BEACEF8AFBAE4C9DBF7A8DFC /* skill3.webp */; };
+		A692E1A052E5407B87354FD5 /* skill4.webp in Resources */ = {isa = PBXBuildFile; fileRef = F31EE329F1A647D09ADB353C /* skill4.webp */; };
+		1C8F61EACEB84E9E87D8662D /* skill5.webp in Resources */ = {isa = PBXBuildFile; fileRef = A9DC522EA52342A7B25380AE /* skill5.webp */; };
+		B8194622AA274FE7AFAF848F /* skill6.webp in Resources */ = {isa = PBXBuildFile; fileRef = 4D99A03C437A410B9B9FEE37 /* skill6.webp */; };
+		EFE99A5E6D364EDDB80B3DDA /* wave.webp in Resources */ = {isa = PBXBuildFile; fileRef = D1C2C88AD9CB42899E05E1E9 /* wave.webp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +27,20 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = skillSwapMobile/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = skillSwapMobile/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = skillSwapMobile/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		1F1F2F96AD794EFB9BF639F6 /* onboarding1.webp */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = onboarding1.webp; path = ../src/assets/images/files/onboarding1.webp; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-skillSwapMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skillSwapMobile.debug.xcconfig"; path = "Target Support Files/Pods-skillSwapMobile/Pods-skillSwapMobile.debug.xcconfig"; sourceTree = "<group>"; };
-		498182E1188440148A96C1D9 /* onboarding3.webp */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = onboarding3.webp; path = ../src/assets/images/files/onboarding3.webp; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-skillSwapMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skillSwapMobile.release.xcconfig"; path = "Target Support Files/Pods-skillSwapMobile/Pods-skillSwapMobile.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-skillSwapMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-skillSwapMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = skillSwapMobile/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = skillSwapMobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E20880AC6B7546C0B82CDBDE /* onboarding2.webp */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = onboarding2.webp; path = ../src/assets/images/files/onboarding2.webp; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		09E0EF50D13F4528923DC74F /* logo-primary-bg.webp */ = {isa = PBXFileReference; name = "logo-primary-bg.webp"; path = "../src/assets/images/files/logo-primary-bg.webp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9C3EA808FFA14BD999D7406F /* skill1.webp */ = {isa = PBXFileReference; name = "skill1.webp"; path = "../src/assets/images/files/skill1.webp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F6E9CA9DD7C248F8AAD9CAF6 /* skill2.webp */ = {isa = PBXFileReference; name = "skill2.webp"; path = "../src/assets/images/files/skill2.webp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BEACEF8AFBAE4C9DBF7A8DFC /* skill3.webp */ = {isa = PBXFileReference; name = "skill3.webp"; path = "../src/assets/images/files/skill3.webp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F31EE329F1A647D09ADB353C /* skill4.webp */ = {isa = PBXFileReference; name = "skill4.webp"; path = "../src/assets/images/files/skill4.webp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A9DC522EA52342A7B25380AE /* skill5.webp */ = {isa = PBXFileReference; name = "skill5.webp"; path = "../src/assets/images/files/skill5.webp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4D99A03C437A410B9B9FEE37 /* skill6.webp */ = {isa = PBXFileReference; name = "skill6.webp"; path = "../src/assets/images/files/skill6.webp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D1C2C88AD9CB42899E05E1E9 /* wave.webp */ = {isa = PBXFileReference; name = "wave.webp"; path = "../src/assets/images/files/wave.webp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +118,14 @@
 		C7614D7BD0D44EFFA6715D90 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1F1F2F96AD794EFB9BF639F6 /* onboarding1.webp */,
-				E20880AC6B7546C0B82CDBDE /* onboarding2.webp */,
-				498182E1188440148A96C1D9 /* onboarding3.webp */,
+				09E0EF50D13F4528923DC74F /* logo-primary-bg.webp */,
+				9C3EA808FFA14BD999D7406F /* skill1.webp */,
+				F6E9CA9DD7C248F8AAD9CAF6 /* skill2.webp */,
+				BEACEF8AFBAE4C9DBF7A8DFC /* skill3.webp */,
+				F31EE329F1A647D09ADB353C /* skill4.webp */,
+				A9DC522EA52342A7B25380AE /* skill5.webp */,
+				4D99A03C437A410B9B9FEE37 /* skill6.webp */,
+				D1C2C88AD9CB42899E05E1E9 /* wave.webp */,
 			);
 			name = Resources;
 			path = "";
@@ -179,9 +194,14 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				D2E4011EE16D60C7FA470FAA /* PrivacyInfo.xcprivacy in Resources */,
-				022398D3FE464B92824B82E1 /* onboarding1.webp in Resources */,
-				28AC9709BE20482193F6E15B /* onboarding2.webp in Resources */,
-				18098817C9AF4606A4E89338 /* onboarding3.webp in Resources */,
+				2670270E95BF49388D9F83D9 /* logo-primary-bg.webp in Resources */,
+				6E8BFCC09A0B440E8ED79A32 /* skill1.webp in Resources */,
+				5262CFE93D1B4F4792FF85FF /* skill2.webp in Resources */,
+				E781C6BB2E5A494593FDDA58 /* skill3.webp in Resources */,
+				A692E1A052E5407B87354FD5 /* skill4.webp in Resources */,
+				1C8F61EACEB84E9E87D8662D /* skill5.webp in Resources */,
+				B8194622AA274FE7AFAF848F /* skill6.webp in Resources */,
+				EFE99A5E6D364EDDB80B3DDA /* wave.webp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -68,13 +68,15 @@ export const Content = styled.Text`
 `
 
 export const TitleText = styled.Text`
-  font-size: ${ms(26)}px;
+  font-size: ${vs(26)}px;
+  line-height: ${vs(30)}px;
   font-weight: 600;
   color: ${({ theme }) => theme.colors.textWhite};
 `
 
 export const ContentText = styled.Text`
-  font-size: ${ms(18)}px;
+  font-size: ${vs(18)}px;
+  line-height: ${vs(22)}px;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.textWhite};
   text-align: center;

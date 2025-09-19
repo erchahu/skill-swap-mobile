@@ -28,9 +28,7 @@ const LogoBox = () => {
   return (
     <LogoImage 
         source={images["logo-primary-bg"]} 
-        style={{
-            transform: [{ scale }],
-        }}
+        style={{ transform: [{ scale }] }}
     />
   )
 };

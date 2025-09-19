@@ -12,6 +12,8 @@ export default {
     screen2DescTitle2: '预约时间',
     screen2DescSubtitle2: '选择双方都合适的时间',
     screen2DescTitle3: '开始交换',
-    screen2DescSubtitle3: '视频通话，技能传递'
+    screen2DescSubtitle3: '视频通话，技能传递',
+    screen3Title1: '安全便捷\n视频交换',
+    screen3Subtitle1: '高清视频，自动结算\n让技能交换更简单',
   },
 }

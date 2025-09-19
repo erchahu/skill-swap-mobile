@@ -1,5 +1,6 @@
 import { Column, Row } from "@/styles";
 import { ms, vs } from "@/utils/scale";
+import { BlurView } from "@react-native-community/blur";
 import styled from "styled-components/native";
 
 export const SecondScreenWrap = styled.View`
@@ -40,12 +41,13 @@ export const SecondDesc = styled.Text`
 `
 
 export const DescCard = styled(Row)`
+  position: relative;
   padding: ${vs(20)}px ${ms(20)}px;
-
   border: 1px solid ${({ theme }) => theme.colors.skillItemBorder};
   border-radius: ${vs(20)}px;
   margin-bottom: ${vs(30)}px;
   gap: ${ms(20)}px;
+  overflow: hidden;
 `
 
 export const DescCardIndex = styled.Text`
@@ -75,4 +77,15 @@ export const DescCardRightDesc = styled.Text`
   font-size: ${vs(14)}px;
   line-height: ${vs(18)}px;
   color: ${({ theme }) => theme.colors.textWhite};
+`
+
+export const DescCardBlurView = styled(BlurView)`
+  position: absolute;
+  
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  border-radius: ${vs(20)}px;
 `

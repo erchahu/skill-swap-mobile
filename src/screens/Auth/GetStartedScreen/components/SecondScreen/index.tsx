@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from "react"
 import { useTranslation } from "react-i18next";
-import { DescCard, DescCardIndex, DescCardRight, DescCardRightDesc, DescCardRightTitle, SecondDesc, SecondScreenImage, SecondScreenWrap, SecondTitle } from "./style";
+import { DescCard, DescCardBlurView, DescCardIndex, DescCardRight, DescCardRightDesc, DescCardRightTitle, SecondDesc, SecondScreenImage, SecondScreenWrap, SecondTitle } from "./style";
 import { images } from "@/assets/images";
 
 const SecondScreen = () => {
@@ -20,7 +20,12 @@ const SecondScreen = () => {
 
       {
         descs.map((desc) => (
-          <DescCard>
+          <DescCard key={desc.index}>
+            <DescCardBlurView 
+              blurType="light" 
+              blurAmount={80} 
+              reducedTransparencyFallbackColor="white"
+            />
             <DescCardIndex>{desc.index}</DescCardIndex>
 
             <DescCardRight>

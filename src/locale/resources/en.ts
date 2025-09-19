@@ -12,6 +12,11 @@ export default {
       screen2DescTitle2: 'Schedule a time',
       screen2DescSubtitle2: 'Choose a time that suits both of you',
       screen2DescTitle3: 'Start exchanging',
-      screen2DescSubtitle3: 'Video call, transfer skills'
+      screen2DescSubtitle3: 'Video call, transfer skills',
+      screen3Title1: 'Safe and convenient\nVideo exchange',
+      screen3Subtitle1: 'HD video, automatic settlement\nMake skill exchange easier',
+      screen3Feature1: 'Secure',
+      screen3Feature2: 'Auto Timer',
+      screen3Feature3: 'Auto Settlement'
     },
   }

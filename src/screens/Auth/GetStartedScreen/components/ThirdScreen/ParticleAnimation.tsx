@@ -14,6 +14,8 @@ interface ParticleAnimationProps {
   index: number;
 }
 
+const DURATION = 15000;
+
 const ParticleAnimation: React.FC<ParticleAnimationProps> = ({ index }) => {
   const translateY = useSharedValue(0);
   const opacity = useSharedValue(0);
@@ -21,13 +23,12 @@ const ParticleAnimation: React.FC<ParticleAnimationProps> = ({ index }) => {
 
   useEffect(() => {
     const delay = index * 2000;
-    const duration = 15000;
 
     translateY.value = withDelay(
       delay,
       withRepeat(
         withTiming(-1000, {
-          duration,
+          duration: DURATION,
           easing: Easing.linear,
         }),
         -1,
@@ -39,7 +40,7 @@ const ParticleAnimation: React.FC<ParticleAnimationProps> = ({ index }) => {
       delay,
       withRepeat(
         withTiming(1, {
-          duration: duration * 0.2,
+          duration: DURATION * 0.2,
           easing: Easing.out(Easing.ease),
         }),
         -1,
@@ -51,7 +52,7 @@ const ParticleAnimation: React.FC<ParticleAnimationProps> = ({ index }) => {
       delay,
       withRepeat(
         withTiming(360, {
-          duration,
+          duration: DURATION,
           easing: Easing.linear,
         }),
         -1,

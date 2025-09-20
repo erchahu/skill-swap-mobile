@@ -15,6 +15,7 @@ import {
   FeatureIcon,
   FeatureLabel,
   ParticlesContainer,
+  FeatureLabelIcon,
 } from "./style";
 
 const ThirdScreen = () => {
@@ -56,7 +57,7 @@ const ThirdScreen = () => {
           {features.map((feature, index) => (
             <FeatureItem key={index}>
               <FeatureIcon>
-                <FeatureLabel style={{ fontSize: 28 }}>{feature.icon}</FeatureLabel>
+                <FeatureLabelIcon>{feature.icon}</FeatureLabelIcon>
               </FeatureIcon>
               <FeatureLabel>{feature.label}</FeatureLabel>
             </FeatureItem>

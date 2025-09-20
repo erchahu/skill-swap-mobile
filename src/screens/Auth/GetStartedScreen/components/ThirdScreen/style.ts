@@ -40,9 +40,9 @@ export const Particle = styled(Animated.View)<{ index: number }>`
 
 export const ContentContainer = styled.View`
   flex: 1;
-  justify-content: center;
   align-items: center;
   padding: ${vs(40)}px ${ms(30)}px;
+  padding-top: ${vs(100)}px;
   z-index: 2;
 `
 
@@ -68,7 +68,7 @@ export const VideoPlayButton = styled.TouchableOpacity`
 export const PlayIcon = styled.View`
   width: 0;
   height: 0;
-  border-left-width: ${vs(20)}px;
+  border-left-width: ${vs(12)}px;
   border-left-color: ${props => props.theme.colors.primary};
   border-top-width: ${vs(12)}px;
   border-top-color: transparent;

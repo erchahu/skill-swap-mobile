@@ -15,5 +15,8 @@ export default {
     screen2DescSubtitle3: '视频通话，技能传递',
     screen3Title1: '安全便捷\n视频交换',
     screen3Subtitle1: '高清视频，自动结算\n让技能交换更简单',
+    screen3Feature1: '安全加密',
+    screen3Feature2: '自动计时',
+    screen3Feature3: '自动结算'
   },
 }

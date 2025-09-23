@@ -43,6 +43,10 @@ export const colors: ColorPalette = {
   info50: '#E9F4FE',
   info500: '#1A72E9',
 
-  transparentWhite: '#FFFFFF4D',
+  transparentWhite20: '#FFFFFF33',
+  transparentWhite30: '#FFFFFF4D',
+  transparentWhite90: '#FFFFFFE6',
+  transparentWhite95: '#000000F2',
   transparentWhiteHeavy: '#FFFFFF80',
+  transparentBlack20: '#00000033',
 };

@@ -44,8 +44,12 @@ declare module 'styled-components/native' {
     info50: string;
     info500: string;
 
-    transparentWhite: string;
+    transparentWhite20: string;
+    transparentWhite30: string;
+    transparentWhite90: string;
+    transparentWhite95: string;
     transparentWhiteHeavy: string;
+    transparentBlack20: string;
   }
 
   export interface SemanticColors {
@@ -89,6 +93,13 @@ declare module 'styled-components/native' {
     // Skill item colors
     skillItemBg: string;
     skillItemBorder: string;
+    skillVideoBg: string;
+    skillVideoBtnBg: string;
+    skillParticleBg: string;
+    skillTextColor: string;
+    skillTextShadow: string;
+    skillFeatureIconBg: string;
+    skillFeatureIconBorderColor: string;
   }
 
   export interface ThemeColors extends ColorPalette, SemanticColors {}

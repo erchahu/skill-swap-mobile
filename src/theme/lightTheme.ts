@@ -4,9 +4,16 @@ import { colors } from "./colors";
 export const lightTheme: DefaultTheme = {
   colors: {
     // Skill item colors
-    skillItemBg: colors.transparentWhite,
+    skillItemBg: colors.transparentWhite30,
     skillItemBorder: colors.transparentWhiteHeavy,
-    
+    skillVideoBg: colors.transparentBlack20,
+    skillVideoBtnBg: colors.transparentWhite90,
+    skillParticleBg: colors.transparentWhite30,
+    skillTextShadow: colors.transparentBlack20,
+    skillTextColor: colors.transparentWhite95,
+    skillFeatureIconBg: colors.transparentWhite20,
+    skillFeatureIconBorderColor: colors.transparentWhite30,
+
     primary: colors.primary500,
     primaryLight: colors.primary300,
     primaryHeavy: colors.primary700,

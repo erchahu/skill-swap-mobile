@@ -19,7 +19,7 @@ export const ParticlesContainer = styled.View`
 
 export const Particle = styled(Animated.View)<{ index: number }>`
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${({ theme }) => theme.colors.skillParticleBg};
   border-radius: ${props => {
     const sizes = [5, 7.5, 4, 6, 10];
     return sizes[props.index] || 5;
@@ -49,7 +49,7 @@ export const ContentContainer = styled.View`
 export const VideoDemo = styled.View`
   width: ${ms(280)}px;
   height: ${vs(180)}px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: ${({ theme }) => theme.colors.skillVideoBg};
   border-radius: ${vs(20)}px;
   margin-bottom: ${vs(30)}px;
   justify-content: center;
@@ -59,7 +59,7 @@ export const VideoDemo = styled.View`
 export const VideoPlayButton = styled.TouchableOpacity`
   width: ${ms(60)}px;
   height: ${ms(60)}px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: ${({ theme }) => theme.colors.skillVideoBtnBg};
   border-radius: ${ms(30)}px;
   justify-content: center;
   align-items: center;
@@ -83,7 +83,7 @@ export const TitleText = styled.Text`
   color: ${props => props.theme.colors.bgWhite};
   text-align: center;
   margin-bottom: ${vs(15)}px;
-  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 2px 10px ${props => props.theme.colors.skillTextShadow};
   line-height: ${vs(40)}px;
 `
 
@@ -93,7 +93,7 @@ export const SubtitleText = styled.Text`
   text-align: center;
   line-height: ${vs(26)}px;
   margin-bottom: ${vs(30)}px;
-  text-shadow: 0px ${ms(1)}px ${vs(5)}px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px ${ms(1)}px ${vs(5)}px ${props => props.theme.colors.skillTextShadow};
   max-width: ${ms(280)}px;
 `
 
@@ -113,13 +113,13 @@ export const FeatureItem = styled.View`
 export const FeatureIcon = styled.View`
   width: ${ms(60)}px;
   height: ${ms(60)}px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: ${({ theme }) => theme.colors.skillFeatureIconBg};
   border-radius: ${vs(30)}px;
   justify-content: center;
   align-items: center;
   margin-bottom: ${vs(10)}px;
   border-width: ${vs(2)}px;
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: ${({ theme }) => theme.colors.skillFeatureIconBorderColor};
 `
 
 export const FeatureLabel = styled.Text`

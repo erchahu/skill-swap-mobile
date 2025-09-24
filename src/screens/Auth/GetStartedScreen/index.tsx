@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useMemo, useRef, useState } from "react"
-import { Dimensions } from "react-native"
+import { Dimensions, Modal, Text, View } from "react-native"
 import { Extrapolation, interpolate, useAnimatedReaction, useSharedValue } from "react-native-reanimated";
 import Carousel, {
   ICarouselInstance,
@@ -23,6 +23,7 @@ const GetStartedScreen = () => {
   const progress = useSharedValue<number>(0);
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [modalVisible, setModalVisible] = useState<boolean>(true)
 
   const onPressPagination = useCallback((index: number) => {
     ref.current?.scrollTo({ index, animated: true });
@@ -82,6 +83,20 @@ const GetStartedScreen = () => {
           </RowButtonText>
         </RowButton>
       </RowWrap>
+
+      <Text style={{ position: 'absolute', top: 0, zIndex:999 }}>English</Text>
+
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}>
+        <View>
+          <Text>Hello World!</Text>
+        </View>
+      </Modal>
     </Container>
 
   )

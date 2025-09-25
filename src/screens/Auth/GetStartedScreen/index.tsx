@@ -5,13 +5,16 @@ import Carousel, {
   ICarouselInstance,
   Pagination,
 } from "react-native-reanimated-carousel";
-import { Container, paginationDot, RowButton, RowButtonText, RowWrap } from "./style";
+import { Container, paginationDot, RowButton, RowButtonText, RowWrap, LanguageButton, LanguageButtonText, LanguageIcon } from "./style";
 import FirstScreen from "./components/FirstScreen";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components/native";
 import SecondScreen from "./components/SecondScreen";
 import ThirdScreen from "./components/ThirdScreen";
 import LangSwitcher from "./components/LangSwitcher";
+import i18n from "@/locale";
+import { LANGUAGE_CONFIG, GLOBE_ICON } from "@/constants/language";
+import { LangEnum } from "@/types";
 
 const data = [...new Array(3).keys()];
 const { width, height } = Dimensions.get("window");
@@ -24,6 +27,8 @@ const GetStartedScreen = () => {
   const progress = useSharedValue<number>(0);
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [langModalVisible, setLangModalVisible] = useState(false);
+  const currentLang = i18n.language as LangEnum;
 
   const onPressPagination = useCallback((index: number) => {
     ref.current?.scrollTo({ index, animated: true });
@@ -83,7 +88,17 @@ const GetStartedScreen = () => {
         </RowButton>
       </RowWrap>
 
-      <LangSwitcher />
+      <LanguageButton onPress={() => setLangModalVisible(true)}>
+        <LanguageButtonText>{LANGUAGE_CONFIG[currentLang]?.shortLabel}</LanguageButtonText>
+        <LanguageIcon>{GLOBE_ICON}</LanguageIcon>
+      </LanguageButton>
+
+      {langModalVisible && (
+        <LangSwitcher
+          visible={langModalVisible}
+          onClose={() => setLangModalVisible(false)}
+        />
+      )}
     </Container>
 
   )

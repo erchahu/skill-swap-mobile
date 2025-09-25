@@ -3,6 +3,7 @@ import { TouchableOpacity } from "react-native"
 import i18n from "@/locale"
 import { LangEnum } from "@/types"
 import { useTranslation } from "react-i18next"
+import { LANGUAGE_CONFIG } from "@/constants/language"
 import {
   LangSwitcherWrap,
   switcherModalStyle,
@@ -10,41 +11,39 @@ import {
   LanguageOption,
   LanguageText,
   SelectedIndicator,
-  ButtonContainer,
-  CancelButton,
-  ConfirmButton,
-  ButtonText,
   ModalContent,
-  LanguageFlag
+  ModalHeader,
+  HeaderButton,
+  HeaderButtonText,
+  CheckIcon
 } from "./style"
 import Modal from "react-native-modal"
 
-const LangSwitcher = () => {
+interface LangSwitcherProps {
+  visible: boolean;
+  onClose: () => void;
+}
+
+const LangSwitcher = ({ visible, onClose }: LangSwitcherProps) => {
   const { t } = useTranslation()
-  const [open, setOpen] = useState<boolean>(true)
   const [selectedLang, setSelectedLang] = useState<LangEnum>(i18n.language as LangEnum)
   const currentLang = i18n.language
-
-  const languages = [
-    { code: LangEnum.EN, label: 'English', flag: '🇺🇸' },
-    { code: LangEnum.ZH, label: '中文', flag: '🇨🇳' }
-  ]
 
   const handleConfirm = () => {
     if (selectedLang !== currentLang) {
       i18n.changeLanguage(selectedLang)
     }
-    setOpen(false)
+    onClose()
   }
 
   const handleCancel = () => {
     setSelectedLang(currentLang as LangEnum)
-    setOpen(false)
+    onClose()
   }
 
   return (
     <Modal
-      isVisible={open}
+      isVisible={visible}
       style={switcherModalStyle}
       onBackdropPress={() => {}}
       onBackButtonPress={() => {}}
@@ -52,32 +51,33 @@ const LangSwitcher = () => {
       animationOut="slideOutDown"
     >
       <LangSwitcherWrap>
-        <ModalContent>
+        <ModalHeader>
+          <HeaderButton onPress={handleCancel}>
+            <HeaderButtonText>{t('languageModal.cancel')}</HeaderButtonText>
+          </HeaderButton>
           <ModalTitle>{t('languageModal.title')}</ModalTitle>
+          <HeaderButton onPress={handleConfirm}>
+            <HeaderButtonText isPrimary>{t('languageModal.confirm')}</HeaderButtonText>
+          </HeaderButton>
+        </ModalHeader>
 
-          {languages.map((lang) => (
+        <ModalContent>
+          {Object.entries(LANGUAGE_CONFIG).map(([code, config]) => (
             <TouchableOpacity
-              key={lang.code}
-              onPress={() => setSelectedLang(lang.code)}
+              key={code}
+              onPress={() => setSelectedLang(code as LangEnum)}
               activeOpacity={0.7}
             >
-              <LanguageOption isSelected={selectedLang === lang.code}>
-                <LanguageText>
-                  <LanguageFlag>{lang.flag}</LanguageFlag> {lang.label}
-                </LanguageText>
-                {selectedLang === lang.code && <SelectedIndicator>✓</SelectedIndicator>}
+              <LanguageOption isSelected={selectedLang === code}>
+                <LanguageText>{config.label}</LanguageText>
+                {selectedLang === code && (
+                  <CheckIcon>
+                    <SelectedIndicator>✓</SelectedIndicator>
+                  </CheckIcon>
+                )}
               </LanguageOption>
             </TouchableOpacity>
           ))}
-
-          <ButtonContainer>
-            <CancelButton onPress={handleCancel}>
-              <ButtonText isCancel>{t('languageModal.cancel')}</ButtonText>
-            </CancelButton>
-            <ConfirmButton onPress={handleConfirm}>
-              <ButtonText>{t('languageModal.confirm')}</ButtonText>
-            </ConfirmButton>
-          </ButtonContainer>
         </ModalContent>
       </LangSwitcherWrap>
     </Modal>

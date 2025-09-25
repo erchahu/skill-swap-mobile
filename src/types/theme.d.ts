@@ -122,4 +122,6 @@ declare module 'styled-components/native' {
     spacing: SemanticSpacing;
     borderRadius: SemanticBorderRadius;
   }
+
+  
 }

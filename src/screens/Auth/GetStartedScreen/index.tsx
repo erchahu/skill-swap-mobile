@@ -11,8 +11,7 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components/native";
 import SecondScreen from "./components/SecondScreen";
 import ThirdScreen from "./components/ThirdScreen";
-import i18n from "@/locale";
-import { LangEnum } from "@/types";
+import LangSwitcher from "./components/LangSwitcher";
 
 const data = [...new Array(3).keys()];
 const { width, height } = Dimensions.get("window");
@@ -25,15 +24,10 @@ const GetStartedScreen = () => {
   const progress = useSharedValue<number>(0);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [modalVisible, setModalVisible] = useState<boolean>(true)
 
   const onPressPagination = useCallback((index: number) => {
     ref.current?.scrollTo({ index, animated: true });
   }, [])
-
-  const onChangeLang = (lang: LangEnum) => {
-    i18n.changeLanguage(lang)
-  }
 
   const sliders = [
     <FirstScreen />,
@@ -89,20 +83,7 @@ const GetStartedScreen = () => {
         </RowButton>
       </RowWrap>
 
-      <Text style={{ position: 'absolute', top: 0, zIndex:999 }}>English</Text>
-
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(!modalVisible);
-        }}>
-        <View>
-          <TouchableOpacity onPress={() => onChangeLang(LangEnum.ZH)}><Text>中文</Text></TouchableOpacity>
-          <TouchableOpacity onPress={() => onChangeLang(LangEnum.EN)}><Text>English</Text></TouchableOpacity>
-        </View>
-      </Modal>
+      <LangSwitcher />
     </Container>
 
   )

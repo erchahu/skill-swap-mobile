@@ -1,5 +1,5 @@
-const useLangzswitcher = () => {
+const useLangswitcher = () => {
 
 };
 
-export default useLangzswitcher;
+export default useLangswitcher;

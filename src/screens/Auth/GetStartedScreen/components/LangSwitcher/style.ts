@@ -1,5 +1,5 @@
 import { ms, vs } from "@/utils/scale";
-import { StyleProp, ViewStyle } from "react-native";
+import { StyleProp, TouchableOpacity, ViewStyle } from "react-native";
 import styled from "styled-components/native";
 import { Row, Column } from "@/styles";
 
@@ -49,7 +49,8 @@ interface LanguageOptionProps {
   isSelected: boolean;
 }
 
-export const LanguageOption = styled(Row)<LanguageOptionProps>`
+export const LanguageOption = styled(TouchableOpacity)<LanguageOptionProps>`
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: ${vs(16)}px ${ms(20)}px;

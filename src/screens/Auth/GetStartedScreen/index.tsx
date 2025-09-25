@@ -89,7 +89,7 @@ const GetStartedScreen = () => {
       </RowWrap>
 
       <LanguageButton onPress={() => setLangModalVisible(true)}>
-        <LanguageButtonText>{LANGUAGE_CONFIG[currentLang]?.shortLabel}</LanguageButtonText>
+        <LanguageButtonText>{LANGUAGE_CONFIG[currentLang]}</LanguageButtonText>
         <LanguageIcon>{GLOBE_ICON}</LanguageIcon>
       </LanguageButton>
 

@@ -54,6 +54,7 @@ export const LanguageButton = styled(TouchableOpacity)`
   border-radius: ${vs(20)}px;
   border-width: ${vs(1)}px;
   border-color: ${({ theme }) => theme.colors.skillItemBorder};
+  gap: ${ms(6)}px;
 `
 
 export const LanguageButtonText = styled.Text`

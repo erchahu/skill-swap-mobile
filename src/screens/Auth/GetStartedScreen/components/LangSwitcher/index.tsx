@@ -62,21 +62,20 @@ const LangSwitcher = ({ visible, onClose }: LangSwitcherProps) => {
         </ModalHeader>
 
         <ModalContent>
-          {Object.entries(LANGUAGE_CONFIG).map(([code, config]) => (
-            <TouchableOpacity
+          {Object.entries(LANGUAGE_CONFIG).map(([code, label]) => (
+            <LanguageOption 
               key={code}
               onPress={() => setSelectedLang(code as LangEnum)}
-              activeOpacity={0.7}
+              activeOpacity={0.7} 
+              isSelected={selectedLang === code}
             >
-              <LanguageOption isSelected={selectedLang === code}>
-                <LanguageText>{config.label}</LanguageText>
-                {selectedLang === code && (
-                  <CheckIcon>
-                    <SelectedIndicator>✓</SelectedIndicator>
-                  </CheckIcon>
-                )}
-              </LanguageOption>
-            </TouchableOpacity>
+              <LanguageText>{label}</LanguageText>
+              {selectedLang === code && (
+                <CheckIcon>
+                  <SelectedIndicator>✓</SelectedIndicator>
+                </CheckIcon>
+              )}
+            </LanguageOption>
           ))}
         </ModalContent>
       </LangSwitcherWrap>

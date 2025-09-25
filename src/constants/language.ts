@@ -1,16 +1,8 @@
 import { LangEnum } from "@/types";
 
 export const LANGUAGE_CONFIG = {
-  [LangEnum.EN]: {
-    label: 'English',
-    shortLabel: 'English',
-    flag: '🇺🇸'
-  },
-  [LangEnum.ZH]: {
-    label: '简体中文',
-    shortLabel: '简体中文',
-    flag: '🇨🇳'
-  }
+  [LangEnum.EN]: 'English',
+  [LangEnum.ZH]: '简体中文'
 };
 
 export const GLOBE_ICON = '🌐';

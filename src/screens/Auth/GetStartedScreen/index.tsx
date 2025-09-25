@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useMemo, useRef, useState } from "react"
-import { Dimensions, Modal, Text, View } from "react-native"
+import { Dimensions, Modal, Text, TouchableOpacity, View } from "react-native"
 import { Extrapolation, interpolate, useAnimatedReaction, useSharedValue } from "react-native-reanimated";
 import Carousel, {
   ICarouselInstance,
@@ -11,6 +11,8 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components/native";
 import SecondScreen from "./components/SecondScreen";
 import ThirdScreen from "./components/ThirdScreen";
+import i18n from "@/locale";
+import { LangEnum } from "@/types";
 
 const data = [...new Array(3).keys()];
 const { width, height } = Dimensions.get("window");
@@ -28,6 +30,10 @@ const GetStartedScreen = () => {
   const onPressPagination = useCallback((index: number) => {
     ref.current?.scrollTo({ index, animated: true });
   }, [])
+
+  const onChangeLang = (lang: LangEnum) => {
+    i18n.changeLanguage(lang)
+  }
 
   const sliders = [
     <FirstScreen />,
@@ -93,7 +99,8 @@ const GetStartedScreen = () => {
           setModalVisible(!modalVisible);
         }}>
         <View>
-          <Text>Hello World!</Text>
+          <TouchableOpacity onPress={() => onChangeLang(LangEnum.ZH)}><Text>中文</Text></TouchableOpacity>
+          <TouchableOpacity onPress={() => onChangeLang(LangEnum.EN)}><Text>English</Text></TouchableOpacity>
         </View>
       </Modal>
     </Container>

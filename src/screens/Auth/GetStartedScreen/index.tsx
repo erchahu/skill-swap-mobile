@@ -35,7 +35,6 @@ const GetStartedScreen = () => {
     <ThirdScreen />
   ]
 
-
   return (
     <Container>
       <Carousel

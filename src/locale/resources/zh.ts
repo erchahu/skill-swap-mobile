@@ -19,4 +19,9 @@ export default {
     screen3Feature2: '自动计时',
     screen3Feature3: '自动结算'
   },
+  languageModal: {
+    title: '选择语言',
+    cancel: '取消',
+    confirm: '确定'
+  },
 }

@@ -49,4 +49,5 @@ export const colors: ColorPalette = {
   transparentWhite95: '#000000F2',
   transparentWhiteHeavy: '#FFFFFF80',
   transparentBlack20: '#00000033',
+  transparent: 'transparent',
 };

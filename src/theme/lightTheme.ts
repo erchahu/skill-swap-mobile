@@ -14,6 +14,9 @@ export const lightTheme: DefaultTheme = {
     skillFeatureIconBg: colors.transparentWhite20,
     skillFeatureIconBorderColor: colors.transparentWhite30,
 
+    // Border transparent
+    borderTransparent: colors.transparent,
+
     primary: colors.primary500,
     primaryLight: colors.primary300,
     primaryHeavy: colors.primary700,

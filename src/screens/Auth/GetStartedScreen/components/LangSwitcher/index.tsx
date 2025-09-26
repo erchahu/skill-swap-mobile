@@ -1,9 +1,6 @@
 import React, { memo, useState } from "react"
-import { TouchableOpacity } from "react-native"
-import i18n from "@/locale"
+import { useLanguage } from "@/hooks/useLanguage"
 import { LangEnum } from "@/types"
-import { useTranslation } from "react-i18next"
-import { LANGUAGE_CONFIG } from "@/constants/language"
 import {
   LangSwitcherWrap,
   switcherModalStyle,
@@ -25,21 +22,35 @@ interface LangSwitcherProps {
 }
 
 const LangSwitcher = ({ visible, onClose }: LangSwitcherProps) => {
-  const { t } = useTranslation()
-  const [selectedLang, setSelectedLang] = useState<LangEnum>(i18n.language as LangEnum)
-  const currentLang = i18n.language
+  const {
+    currentLanguage,
+    languages,
+    changeLanguage,
+    isCurrentLanguage,
+    t,
+    isChangingLanguage
+  } = useLanguage();
 
-  const handleConfirm = () => {
-    if (selectedLang !== currentLang) {
-      i18n.changeLanguage(selectedLang)
+  const [selectedLang, setSelectedLang] = useState<LangEnum>(currentLanguage);
+
+  const handleConfirm = async () => {
+    if (selectedLang !== currentLanguage) {
+      await changeLanguage(selectedLang);
     }
-    onClose()
-  }
+    onClose();
+  };
 
   const handleCancel = () => {
-    setSelectedLang(currentLang as LangEnum)
-    onClose()
-  }
+    setSelectedLang(currentLanguage);
+    onClose();
+  };
+
+  // Reset selected language when modal opens
+  React.useEffect(() => {
+    if (visible) {
+      setSelectedLang(currentLanguage);
+    }
+  }, [visible, currentLanguage]);
 
   return (
     <Modal
@@ -52,22 +63,23 @@ const LangSwitcher = ({ visible, onClose }: LangSwitcherProps) => {
     >
       <LangSwitcherWrap>
         <ModalHeader>
-          <HeaderButton onPress={handleCancel}>
+          <HeaderButton onPress={handleCancel} disabled={isChangingLanguage}>
             <HeaderButtonText>{t('languageModal.cancel')}</HeaderButtonText>
           </HeaderButton>
           <ModalTitle>{t('languageModal.title')}</ModalTitle>
-          <HeaderButton onPress={handleConfirm}>
+          <HeaderButton onPress={handleConfirm} disabled={isChangingLanguage}>
             <HeaderButtonText isPrimary>{t('languageModal.confirm')}</HeaderButtonText>
           </HeaderButton>
         </ModalHeader>
 
         <ModalContent>
-          {Object.entries(LANGUAGE_CONFIG).map(([code, label]) => (
-            <LanguageOption 
+          {Object.entries(languages).map(([code, label]) => (
+            <LanguageOption
               key={code}
               onPress={() => setSelectedLang(code as LangEnum)}
-              activeOpacity={0.7} 
+              activeOpacity={0.7}
               isSelected={selectedLang === code}
+              disabled={isChangingLanguage}
             >
               <LanguageText>{label}</LanguageText>
               {selectedLang === code && (
@@ -80,7 +92,7 @@ const LangSwitcher = ({ visible, onClose }: LangSwitcherProps) => {
         </ModalContent>
       </LangSwitcherWrap>
     </Modal>
-  )
-}
+  );
+};
 
-export default memo(LangSwitcher)
+export default memo(LangSwitcher);

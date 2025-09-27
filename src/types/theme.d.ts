@@ -50,6 +50,7 @@ declare module 'styled-components/native' {
     transparentWhite95: string;
     transparentWhiteHeavy: string;
     transparentBlack20: string;
+    transparent: string;
   }
 
   export interface SemanticColors {
@@ -71,6 +72,7 @@ declare module 'styled-components/native' {
     borderPrimary: string;
     borderSecondary: string;
     borderDisabled: string;
+    borderTransparent: string;
     
     // 背景颜色
     bgPrimary: string;
@@ -122,4 +124,6 @@ declare module 'styled-components/native' {
     spacing: SemanticSpacing;
     borderRadius: SemanticBorderRadius;
   }
+
+  
 }

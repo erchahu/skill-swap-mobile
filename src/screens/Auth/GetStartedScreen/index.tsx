@@ -1,28 +1,34 @@
-import React, { memo, useCallback, useMemo, useRef, useState } from "react"
+import React, { memo, useCallback, useRef, useState } from "react"
 import { Dimensions } from "react-native"
-import { Extrapolation, interpolate, useAnimatedReaction, useSharedValue } from "react-native-reanimated";
+import { Extrapolation, interpolate, useSharedValue } from "react-native-reanimated";
 import Carousel, {
   ICarouselInstance,
   Pagination,
 } from "react-native-reanimated-carousel";
-import { Container, paginationDot, RowButton, RowButtonText, RowWrap } from "./style";
+import { Container, paginationDot, RowButton, RowButtonText, RowWrap, LanguageButton, LanguageButtonText, LanguageIcon } from "./style";
 import FirstScreen from "./components/FirstScreen";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components/native";
 import SecondScreen from "./components/SecondScreen";
 import ThirdScreen from "./components/ThirdScreen";
+import LangSwitcher from "./components/LangSwitcher";
+import { GLOBE_ICON } from "@/constants/language";
+import { useLanguage, useInitializeLanguage } from "@/hooks/useLanguage";
 
 const data = [...new Array(3).keys()];
 const { width, height } = Dimensions.get("window");
 
 const GetStartedScreen = () => {
-  const { t } = useTranslation();
   const theme = useTheme();
+  const { t, currentLanguageLabel } = useLanguage();
+
+  // Initialize language from storage on app startup
+  useInitializeLanguage();
 
   const ref = useRef<ICarouselInstance>(null);
   const progress = useSharedValue<number>(0);
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [langModalVisible, setLangModalVisible] = useState(false);
 
   const onPressPagination = useCallback((index: number) => {
     ref.current?.scrollTo({ index, animated: true });
@@ -33,7 +39,6 @@ const GetStartedScreen = () => {
     <SecondScreen />,
     <ThirdScreen />
   ]
-
 
   return (
     <Container>
@@ -82,6 +87,18 @@ const GetStartedScreen = () => {
           </RowButtonText>
         </RowButton>
       </RowWrap>
+
+      <LanguageButton onPress={() => setLangModalVisible(true)}>
+        <LanguageButtonText>{currentLanguageLabel}</LanguageButtonText>
+        <LanguageIcon>{GLOBE_ICON}</LanguageIcon>
+      </LanguageButton>
+
+      {langModalVisible && (
+        <LangSwitcher
+          visible={langModalVisible}
+          onClose={() => setLangModalVisible(false)}
+        />
+      )}
     </Container>
 
   )

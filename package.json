@@ -11,6 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^2.2.0",
     "@react-native-community/blur": "^4.4.1",
     "@react-native/new-app-screen": "0.81.1",
     "i18next": "^25.5.2",
@@ -20,6 +21,8 @@
     "react-native-asset": "^2.1.1",
     "react-native-gesture-handler": "^2.28.0",
     "react-native-linear-gradient": "^2.8.3",
+    "react-native-localize": "^3.5.2",
+    "react-native-modal": "^14.0.0-rc.1",
     "react-native-reanimated": "^4.1.0",
     "react-native-reanimated-carousel": "^4.0.3",
     "react-native-safe-area-context": "^5.6.1",

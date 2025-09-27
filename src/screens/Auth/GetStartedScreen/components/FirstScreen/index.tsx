@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { useTheme } from "styled-components/native";
-import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
 
 import LogoContent from "./LogoContent";
 
@@ -8,7 +8,7 @@ import { ContentBox, ContentText, FirstScreenWrap, TitleText } from "./style";
 
 const FirstScreen = () => {
 
-  const { t } = useTranslation();
+  const { t } = useLanguage();
   const theme = useTheme();
 
   return (

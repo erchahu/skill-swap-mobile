@@ -19,4 +19,9 @@ export default {
       screen3Feature2: 'Auto Timer',
       screen3Feature3: 'Auto Settlement'
     },
+    languageModal: {
+      title: 'Select Language',
+      cancel: 'Cancel',
+      confirm: 'Confirm'
+    },
   }

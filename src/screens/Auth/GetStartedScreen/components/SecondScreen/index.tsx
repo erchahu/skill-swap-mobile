@@ -1,10 +1,10 @@
 import React, { memo, useMemo } from "react"
-import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
 import { DescCard, DescCardBlurView, DescCardIndex, DescCardRight, DescCardRightDesc, DescCardRightTitle, SecondDesc, SecondScreenImage, SecondScreenWrap, SecondTitle } from "./style";
 import { images } from "@/assets/images";
 
 const SecondScreen = () => {
-  const { t } = useTranslation();
+  const { t } = useLanguage();
 
   const descs = useMemo(() => [
     { index: 1, title: t('getStarted.screen2DescTitle1'), desc: t('getStarted.screen2DescSubtitle1') },

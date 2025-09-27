@@ -41,3 +41,28 @@ export const paginationDot = {
     borderRadius: ms(3)
   },
 }
+
+export const LanguageButton = styled(TouchableOpacity)`
+  position: absolute;
+  top: ${vs(60)}px;
+  right: ${ms(20)}px;
+  z-index: 999;
+  flex-direction: row;
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.skillItemBg};
+  padding: ${vs(8)}px ${ms(12)}px;
+  border-radius: ${vs(20)}px;
+  border-width: ${vs(1)}px;
+  border-color: ${({ theme }) => theme.colors.skillItemBorder};
+  gap: ${ms(6)}px;
+`
+
+export const LanguageButtonText = styled.Text`
+  color: ${({ theme }) => theme.colors.textWhite};
+  font-size: ${vs(14)}px;
+  margin-left: ${ms(6)}px;
+`
+
+export const LanguageIcon = styled.Text`
+  font-size: ${vs(16)}px;
+`

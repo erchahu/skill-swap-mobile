@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { useTheme } from "styled-components/native";
-import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
 import ParticleAnimation from "./ParticleAnimation";
 import {
   ThirdScreenWrap,
@@ -19,7 +19,7 @@ import {
 } from "./style";
 
 const ThirdScreen = () => {
-  const { t } = useTranslation();
+  const { t } = useLanguage();
   const theme = useTheme();
 
   const features = [
